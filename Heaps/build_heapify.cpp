@@ -34,15 +34,15 @@ void heapsort(int a[], int n){
     
     for(int i = n-1; i>0; i--){
         swap(&a[0], &a[i]);
-        heapify(a, i, 0);
+        heapify(a, i-1, 0);
     }
 }
 
 int main(){
     int arr[]={32,4,42,46,543,134,26,7};
     int n = 8;
-    build_heapify(arr, n);
-    // heapsort(arr, n);
+    // build_heapify(arr, n);
+    heapsort(arr, n);
     // heapify(arr, n, 0);
     for (int i = 0; i < n; i++)
         cout << arr[i] << "\t";
